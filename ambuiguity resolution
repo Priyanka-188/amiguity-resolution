@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+
+class base1
+{
+public:
+    void greet()
+    {
+        cout<<"Hellow people"<<endl;
+    }
+};
+class base2
+{
+public:
+    void greet()
+    {
+        cout<<"Hellow  my beautiful people"<<endl;
+    }
+};
+class derived : public base1, public base2
+{
+public:
+    void greet()
+    {
+        base2::greet();
+    }
+
+};
+int main()
+{
+    derived d;
+    d.greet();
+
+    return 0;
+}
